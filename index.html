@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+
+    body {background-color: hsl(217, 54%, 11%);}
+
+    #card {
+      border-style: solid; 
+      border-radius: 20px; 
+      border-color: hsl(216, 50%, 16%); 
+      background-color: hsl(216, 50%, 16%); 
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 320px;
+      height: 540px;
+      box-shadow: 0px 0px 100px 5px hsl(217, 54%, 8%);
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+    }
+
+    .pic {
+      border-radius: 10px;
+      width: 280px;
+      display: block;
+      margin-bottom: 25px;
+    }
+
+    .select {
+      visibility: hidden;
+      border-radius: 10px;
+      width: 280px;
+      height: 280px;
+      background-color: hsla(178, 100%, 50%, 0.575);
+      margin-bottom: 25px;
+      position: absolute;
+    }
+
+    .container:hover .select {
+      visibility: visible;
+      cursor: pointer;
+    }
+
+    .text {
+      font-family: "Outfit", sans-serif;
+      text-align: left;
+      display: block;
+      line-height: 25px;
+    }
+
+    #name {
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    #description, #credits{
+      color: hsl(215, 51%, 70%);
+      font-size: 16px;
+      font-weight: 300;
+    }
+
+    #credits {
+      float: left;
+      margin-left: 18px;
+      line-height: 35px;
+    }
+
+    #credits span {
+      color: white;
+    }
+
+    #name:hover, #credits span:hover{
+      color: hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    #avatar {
+      float: left; 
+      height: 35px; 
+      border: 1px solid white; 
+      border-radius: 50px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <section id = "card">
+    <div style="margin: 20px;">
+      <div class="container">
+        <div class="select"><i class="fa fa-eye" style="font-size:48px;color:white; margin-top: 120px;"></i></div>
+        <img class="pic" src="images/image-equilibrium.jpg" alt="Picture of NFT">
+      </div>
+      <p class="text" id="name">Equilibrium #3429</p>
+      <p class="text" id="description">Our Equilibrium collection promotes<br>balance and calm.</p> 
+
+      <div class="clearfix" style="margin-bottom: 15px;"> 
+        <div>
+          <img style="float: left;" src="images/icon-ethereum.svg" alt="NFT Icon">
+          <div class="text" style="float: left; margin-left: 8px; line-height: 18px; color: hsl(178, 100%, 50%);">0.041 ETH</div>
+        </div>
+        <div>
+          <div class="text" style="float: right; margin-left: 8px; line-height: 18px; color: hsl(215, 51%, 70%);">3 days left</div>
+          <img style="float: right;" src="images/icon-clock.svg" alt="Clock Icon">
+        </div>
+      </div>   
+        
+      <hr style="border-bottom: 1px solid rgba(139, 172, 218, 0.555);">
+
+      <div style="margin-top: 15px;">
+      <img id="avatar" src="images/image-avatar.png" alt="Profile Picture">
+      <div class="text" id="credits">Creation of <span>Jules Wyvern</span></div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
